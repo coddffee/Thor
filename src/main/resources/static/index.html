@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script type="text/javascript">
+
+        let managerRegistry = {
+            id:1,
+            name:"Tony",
+            phone:"18372602180",
+            password:"123456",
+            gender:"MALE",
+            age:40,
+            icon:null,
+            postId:1,
+            date:"2021-05-15"
+        };
+
+        function signUp() {
+            $.ajax({
+                type:"POST",
+                url:"http://localhost:8080/thor/managers-registry",
+                async:true,
+                dateType:"json",
+                headers:{"Content-Type":"application/json;charset=utf-8"},
+                data:JSON.stringify(managerRegistry)
+            });
+        }
+        function queryPersonalRegistry() {
+            $.ajax({
+                type:"GET",
+                url:"http://localhost:8080/thor/managers-registry/personal",
+                async:true,
+                dateType:"json",
+                success:function (data) {
+                    console.log(data)
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<div><a href="javascript:signUp()">注册</a></div>
+<div><a href="javascript:queryPersonalRegistry()">查看</a></div>
+</body>
+</html>

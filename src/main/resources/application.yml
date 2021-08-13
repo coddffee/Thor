@@ -1,0 +1,56 @@
+# basic access configuration
+server:
+  # port
+  port: 8080
+  servlet:
+    # path to access the server
+    context-path: /thor
+
+spring:
+  datasource:
+    # datasource,database connectivity pool
+    type: com.alibaba.druid.pool.DruidDataSource
+    # username
+    username: Lishaoyin
+    # password
+    password: 1003.com
+    # url
+    url: jdbc:mysql://localhost:1003/thor?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    # mysql-jdbc driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  http:
+    # charset encoding
+    encoding:
+      # force using charset by configuration
+      force: true
+      charset: UTF-8
+      enabled: true
+
+mybatis:
+  # entities package
+  type-aliases-package: com.thor.entity
+  # SQL mapping files path
+  mapper-locations: mappers/*.xml
+  configuration:
+    # abc_def convert with abcDef
+    map-underscore-to-camel-case: true
+  # type handlers package
+  type-handlers-package: com.thor.typehandler
+
+thor:
+  # page size configuration
+  page-size:
+    managers-registry-page-size: 5
+    managers-page-size: 5
+    inspectors-registry-page-size: 5
+    inspectors-page-size: 5
+    managers-tasks-page-size: 5
+    inspectors-tasks-page-size: 5
+    manager-manual-inspection-records-page-size: 5
+    inspector-manual-inspection-records-page-size: 5
+  # login information of administrator
+  system-manager:
+    name: Tony
+    phone: 18372602180
+    password: 1003.com
