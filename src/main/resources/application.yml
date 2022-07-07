@@ -11,9 +11,9 @@ spring:
     # datasource,database connectivity pool
     type: com.alibaba.druid.pool.DruidDataSource
     # username
-    username: Lishaoyin
+    username: xxx
     # password
-    password: 1003.com
+    password: xxxxxx
     # url
     url: jdbc:mysql://localhost:xxx/yyy?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     # mysql-jdbc driver
