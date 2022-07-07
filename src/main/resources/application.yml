@@ -15,7 +15,7 @@ spring:
     # password
     password: 1003.com
     # url
-    url: jdbc:mysql://localhost:1003/thor?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://localhost:xxx/yyy?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     # mysql-jdbc driver
     driver-class-name: com.mysql.cj.jdbc.Driver
 
@@ -52,5 +52,5 @@ thor:
   # login information of administrator
   system-manager:
     name: Tony
-    phone: 18372602180
-    password: 1003.com
+    phone: xxxxxxxxxxx
+    password: xxxxxx
